@@ -35,7 +35,7 @@ fn  print_weapon_vtable_addresses() {
     unsafe{
         let mut output_weapon = String::new();
         for weapon_kind in 0..0x267{
-            let vtable = get_fighter_vtable(weapon_kind);
+            let vtable = get_weapon_vtable(weapon_kind);
             let first_entry_ptr = *(vtable as *const u64) as *const usize;
             let name = LOWERCASE_WEAPON_NAMES.get(weapon_kind as usize).unwrap();
             let owner_name = LOWERCASE_WEAPON_OWNER_NAMES.get(weapon_kind as usize).unwrap();
@@ -76,7 +76,7 @@ fn  print_weapon_vtable_pointer_addresses() {
     unsafe{
         let mut output_weapon = String::new();
         for weapon_kind in 0..0x267{
-            let vtable = get_fighter_vtable(weapon_kind);
+            let vtable = get_weapon_vtable(weapon_kind);
             let first_entry_ptr = *(vtable as *const u64) as *const usize;
             let name = LOWERCASE_WEAPON_NAMES.get(weapon_kind as usize).unwrap();
             let owner_name = LOWERCASE_WEAPON_OWNER_NAMES.get(weapon_kind as usize).unwrap();
