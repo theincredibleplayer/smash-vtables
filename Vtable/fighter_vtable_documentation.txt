@@ -1,0 +1,179 @@
+000: INITIALIZE
+001: EVENT_LISTENER_INITIALIZE
+002: UNK2                                      
+003: SOME_FUNC_SETTER
+004: RESET_1
+005: RESET_2
+006: RESET_3                                   // maybe not sure, just used for m2 and snake
+007: ON_DEATH
+008: ON_REBIRTH2
+009: ON_FRAME_1
+010: ON_FRAME_2
+011: ON_FRAME_3
+012: ON_FRAME_4
+013: ON_FRAME_5
+014: UNK14
+015: SOME_KIRBY_RELATED
+016: MOUTH_BREATHERS_OBJECT_RESET             // DDD and kirby related
+017: ON_PRE_DAMAGE                            // only ever used by snake, it runs right before going into a damage status it seems
+018: ON_FRAME_6
+019: ON_FRAME_7
+020: ON_FRAME_8
+021: ON_PAUSE                                 // runs once on pause
+022: ON_PAUSE_FRAME                           // its an on frame while paused
+023: ON_UNPAUSE                               // runs once on unpause
+024: ON_MATCH_GO                              // it runs once when the announcer says GO
+025: ON_DEATH_RESET_1
+026: ON_DEATH_RESET_2
+027: ON_FRAME_9
+028: ON_FRAME_10
+029: ON_FRAME_11
+030: ON_STATUS_CHANGE
+031: ON_SITUATION_CHANGE
+032: UNK32
+033: UNK33
+034: UNK34
+035: UNK35
+036: ON_ATTACK
+037: UNK37
+038: UNK38
+039: UNK39
+040: UNK40
+041: ON_ATTACK_EVENT
+042: UNK42
+043: UNK43                                    // apparently this removes the hammer and the kart from the victory screen for koopajr?
+044: UNK44
+045: SECOND_SITUATION_CALLBACK
+046: ON_LINK_EVENT
+047: UNK47
+048: ON_SEARCH
+049: SOME_KIRBY_EVENT
+050: ON_SHIELD_COLLISION
+051: SHIELD_LR_AND_COUNTER_STATUS
+052: UNK52
+053: UNK53                                    // shield related but usure what its doing
+054: UNK54
+055: ON_SHIELD                                // aka on reflection
+056: UNK56
+057: UNK57
+058: ON_NOTIFY_EVENT_MSC_CMD
+059: ON_CHANGE_MOTION
+060: UNK60
+061: UNK61
+062: UNK62
+063: UNK63
+064: UNK64
+065: UNK65
+066: ON_GRABBED                               // triggers once a grabbox connects, it also seems to make you immune to being grabbed if the return value isn't 1
+067: UNK67
+068: ON_DAMAGE
+069: UNK69
+070: UNK70
+071: UNK71
+072: UNK72
+073: UNK73
+074: UNK74
+075: UNK75
+076: UNK76
+077: UNK77
+078: UNK78
+079: UNK79
+080: UNK80
+081: UNK81
+082: UNK82
+083: UNK83
+084: UNK84
+085: UNK85
+086: UNK86
+087: UNK87
+088: UNK88
+089: UNK89
+090: UNK90
+091: UNK91
+092: UNK92
+093: UNK93
+094: UNK94
+095: ON_REBIRTH
+096: UNK96
+097: UNK97
+098: UNK98
+099: UNK99
+100: UNK100
+101: ON_STATUS_TRANSITION
+102: UNK102
+103: UNK103
+104: UNK104
+105: UNK105
+106: UNK106
+107: UNK107
+108: UNK108
+109: UNK109
+110: UNK110
+111: UNK111
+112: UNK112
+113: UNK113
+114: UNK114
+115: UNK115
+116: UNK116
+117: UNK117
+118: UNK118
+119: UNK119
+120: UNK120
+121: UNK121
+122: UNK122                                             // something knockout voice related?
+123: UNK123
+124: UNK124
+125: UNK125
+126: UNK126
+127: UNK127
+128: UNK128
+129: UNK129
+130: UNK130
+131: UNK131                                             // might be on status end or on motion end for pacman
+                                                        // for popo and nana its literally the same as the 2 below
+                                                        // no clue what minmin is doing but whenever its called it sets the situation kind to air using:
+                                                        // StatusModule::set_situation_kind(fighter.module_accessor, app::SituationKind(*SITUATION_KIND_AIR), false);
+                                                        
+132: UNK132                                             // literally the same function as 133 but less args i am so confused kys sakurai
+
+133: UNK133                                             // stubbed, shared to everyone except popo and nana
+
+                                                        // its something sideb and link module related?
+134: UNK134                                             // has a whole 5 params, sets 3,4 and 5 to 0 then returns 0, shared for every character except hero
+                                                        // for hero it sets the reflection parameters for bounce
+                                                        // if bounce isnt active it sets param_3, param_4 and param_5 to 0
+                                                        // function returns 1 as long as bounce is active, otherwise 0
+                                                    
+135: UNK135                                             // stubbed, shared for every character except hero
+                                                        // SetVisibleKind on the "brave_fire3_hold_max" effect and "brave_reflect" effect, true or false depends on the third arg
+
+136: UNK136                                             // returns true, shared for every character except master
+                                                        // master: seems to check if current status is not FIGHTER_MASTER_STATUS_KIND_SPECIAL_HI_HIT and returns true if so 
+
+137: UNK137                                             // returns true, shared for every character except elight
+
+138: ON_GRAB                                            // shared for every character, returns the function's third argument (idk what it is tho) except for demon
+                                                        // demon: checks if param_3 == 0x41, then checks if rage is enabled and some other condition, then does some buffering related stuff and returns either 0x41 or 0x1ca depending on outcome
+                                                        // 0x41 seems to be capture pulled and 0x1ca is FIGHTER_STATUS_KIND_DEMON_DIVED
+                                                        // this seems to handle grab buffering when rage drive is active
+                                                        // aka handles weather to select rage drive or a throw
+                                                        // i think this just returns which status to go to if grabbed
+
+139: UNK139                                             // returns false, shared for every character
+                                                        // except for demon, if it isnt FIGHTER_DEMON_STATUS_KIND_THROW_COMMAND or FIGHTER_STATUS_KIND_THROW it returns 0, otherwise returns 1
+
+140: SORA_EVENT_1                                       // returns false, shared for every character except sora
+
+141: SORA_EVENT_2                                       // returns false, shared for every character except sora
+                                                        // sora: i dont exactly know what its doing but its checking if the status is downb and doing stuff
+
+142: SORA_EVENT_3                                       // returns false, shared for every character except sora
+                                                        // sora: its doing some checks for sora but i cant tell what exactly its doing or what the args are
+
+143: RETRUNS_NUMBER_2                                   // shared across the entire cast except sora it , returns 2
+                                                        // in sora's case it checks if (param_3 == '\x03') and if so returns 3, otherwise returns 2
+
+144: RETURN_IN_X3                                       // shared across the entire cast except sora and kazuya it seems, returns whatever was in the register in_x3 + 0x58
+                                                        // sora and kazuya have 14 params to the function and i am not reading allat
+
+145: RETURNS_ITEM_HAND_GRIP_HEX                         // shared across the entire cast except minmin, this one always returns the hash for item_hand_grip even with minmin

@@ -1,0 +1,9 @@
+**/target
+**/*.py
+**/*.pyc
+Cargo.lock
+.DS_Store
+.github/workflows/rustdoc.yml
+.github/workflows/rust_build.yml
+.devcontainer/Dockerfile
+.vscode/settings.json

@@ -1,0 +1,1 @@
+Vtable function addresses and documentation for smash ultimate
