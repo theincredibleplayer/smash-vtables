@@ -1,5 +1,4 @@
 **/target
-**/*.py
 **/*.pyc
 Cargo.lock
 .DS_Store
