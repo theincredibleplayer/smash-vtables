@@ -1,0 +1,105 @@
+000: INITIALIZATION //looks like initializing the article
+001: UNK1
+002: UNK2 //Most weapons refer to a common function
+003: UNK3
+004: UNK4
+005: UNK5
+006: UNK6
+007: WEAPON_GENERATE_1
+008: WEAPON_GENERATE_2
+009: WEAPON_GENERATE_3
+010: ON_WEAPON_REMOVE
+011: UNK11
+012: UNK12
+013: WEAPON_NOTIFY_EVENT_MSC_CMD
+014: WEAPON_LINK_EVENT
+015: UNK15
+016: UNK16
+017: UNK17
+018: UNK18
+019: UNK19
+020: UNK20
+021: UNK21
+022: UNK22
+023: WEAPON_ON_STAGE_COLLISION
+024: UNK24
+025: UNK25 //Sets TeamModule and ReflectModule associated stuff
+026: UNK26
+027: UNK27
+028: UNK28
+029: UNK29 //Resets TeamModule and ReflectModule associated stuff
+030: WEAPON_ON_ATTACK
+031: UNK31 //Sets speed and life multipliers
+032: ON_WEAPON_REFLECT //When this weapon gets reflected
+033: UNK33 //Sets team and posture stuff for opponent projectile
+034: UNK34 //Sets the reflection speed
+035: UNK35 //Updates projectile lr
+036: ON_WEAPON_REFLECTION //When this weapon reflects other articles
+037: UNK37
+038: UNK38
+039: UNK39
+040: UNK40
+041: UNK41
+042: UNK42
+043: UNK43
+044: ON_SHIELD_COLLISION_1 //Unused on all articles due to none of them loading ShieldModule
+045: ON_SHIELD_COLLISION_2 //Unused on all articles due to none of them loading ShieldModule
+046: ON_REFLECTOR_COLLISION_1
+047: ON_REFLECTOR_COLLISION_2
+048: UNK48
+049: UNK49
+050: UNK50 //Lr related stuff
+051: UNK51
+052: UNK52 //Object IDs and GroundModule::set_shape_safe_pos
+053: UNK53
+054: UNK54
+055: UNK55 //Gets the pos of the weapon and returns it as a u8                     
+056: UNK56
+057: UNK57
+058: UNK58
+059: UNK59
+060: UNK60
+061: UNK61
+062: UNK62
+063: UNK63
+064: UNK64
+065: UNK65
+066: UNK66
+067: UNK67
+068: UNK68
+069: UNK69
+070: UNK70
+071: UNK71
+072: UNK72
+073: UNK73
+074: UNK74
+075: UNK75
+076: UNK76
+077: UNK77 //Uncertain on what this offset is doing but it has code in it
+078: UNK78
+079: UNK79
+080: UNK80
+081: UNK81
+082: UNK82
+083: UNK83
+084: UNK84 //More KineticModule stuff
+085: UNK85
+086: UNK86
+087: UNK87
+088: UNK88
+089: UNK89
+090: UNK90
+091: UNK91
+092: UNK92
+093: UNK93
+094: UNK94
+095: UNK95
+096: UNK96
+097: UNK97
+098: UNK98
+099: UNK99
+100: UNK100 //More LinkModule stuff
+101: UNK101
+102: UNK102
+103: UNK103 //Uncertain on what this offset is doing but it has code in it
+104: UNK104
