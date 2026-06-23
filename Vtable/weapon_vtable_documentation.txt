@@ -27,13 +27,13 @@
 026: UNK26
 027: UNK27
 028: UNK28 //Resets TeamModule and ReflectModule associated stuff
-029: WEAPON_ON_ATTACK
+029: ON_ATTACK
 030: UNK30 //Sets speed and life multipliers
 031: ON_WEAPON_REFLECT //When this weapon gets reflected
 032: UNK32 //Sets team and posture stuff for opponent projectile
 033: UNK33 //Sets the reflection speed
 034: UNK34 //Updates projectile lr
-035: ON_WEAPON_REFLECTION //When this weapon reflects other articles
+035: ON_SEARCH
 036: UNK36
 037: UNK37
 038: UNK38
@@ -43,7 +43,7 @@
 042: UNK42
 043: ON_SHIELD_COLLISION_1 //Unused on all articles due to none of them loading ShieldModule
 044: ON_SHIELD_COLLISION_2 //Unused on all articles due to none of them loading ShieldModule
-045: ON_REFLECTOR_COLLISION_1
+045: ON_REFLECTOR_COLLISION_1 //When a battle object hits this articles reflector
 046: ON_REFLECTOR_COLLISION_2
 047: UNK47
 048: UNK48
